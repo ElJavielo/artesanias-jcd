@@ -513,6 +513,19 @@ footer {
     height: 35px;
     object-fit: contain;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 28px !important;
+    height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    object-fit: contain;
+}
 
 @media (max-width: 768px) {
 
