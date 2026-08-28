@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Artesanías J.C.D S.A.S.</title>
+
+    <link rel="stylesheet" href="./CSS/estilos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="./img/Logo.jpeg" alt="Logo Artesanías J.C.D">
+            <span>Artesanías J.C.D S.A.S.</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contacto">
+
+            <h1>Contacto</h1>
+
+            <div class="contacto-contenido">
+
+
+                <!-- FORMULARIO -->
+
+                <div class="formulario">
+
+                    <h2>Envíanos un mensaje</h2>
+
+                    <form id="formulario-contacto" action="https://formspree.io/f/xbgjrnvz" method="POST">
+
+                        <label for="nombre">Nombre</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribe tu nombre"
+                        >
+
+                        <label for="correo">Correo electrónico</label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="Escribe tu correo"
+                        >
+
+                        <label for="mensaje">Mensaje</label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            placeholder="Escribe tu mensaje"
+                        ></textarea>
+
+                        <button type="submit">
+                            Enviar mensaje
+                        </button>
+
+                        <p id="mensaje-formulario"></p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- INFORMACIÓN DE CONTACTO -->
+
+                <div class="informacion-contacto">
+
+                    <h2>Información de contacto</h2>
+
+                    <p>
+                        <strong>Correo:</strong><br>
+                        artesaniasjcd@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Dirección:</strong><br>
+                        Bogotá, Colombia
+                    </p>
+
+                    <p>
+                        <strong>Horario:</strong><br>
+                        Lunes a viernes: 8:00 a. m. - 6:00 p. m.<br>
+                        Sábados: 9:00 a. m. - 4:00 p. m.
+                    </p>
+
+
+                    <!-- REDES SOCIALES -->
+
+                    <div class="redes-sociales">
+
+                        <h3>Síguenos en redes sociales</h3>
+
+                        <a href="https://www.instagram.com/j.c.d.artesanias?igsi=NG5wYnc1M2ZqN2w1" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@artesanas.j.c.d" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Artesanías J.C.D S.A.S. - Todos los derechos reservados.
+        </p>
+
+    </footer>
+    
+    <script>
+
+const formulario = document.getElementById("formulario-contacto");
+const mensaje = document.getElementById("mensaje-formulario");
+
+formulario.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const datos = new FormData(formulario);
+
+    try {
+
+        const respuesta = await fetch(formulario.action, {
+            method: "POST",
+            body: datos,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (respuesta.ok) {
+
+            mensaje.textContent = "¡Mensaje enviado correctamente!";
+            mensaje.style.color = "#8b5e3c";
+
+            formulario.reset();
+
+        } else {
+
+            mensaje.textContent = "No se pudo enviar el mensaje. Inténtalo nuevamente.";
+            mensaje.style.color = "red";
+
+        }
+
+    } catch (error) {
+
+        mensaje.textContent = "Ocurrió un error. Inténtalo nuevamente.";
+        mensaje.style.color = "red";
+
+    }
+
+});
+
+</script>
+</body>
+
+</html>

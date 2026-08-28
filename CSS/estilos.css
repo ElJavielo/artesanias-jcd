@@ -1,0 +1,686 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8b5e3c;
+}
+
+nav a.activo {
+    color: #8b5e3c;
+    border-bottom: 2px solid #8b5e3c;
+    padding-bottom: 5px;
+}
+
+/* ==============================
+   PÁGINA DE INICIO
+   ============================== */
+
+.inicio {
+    min-height: 520px;
+    padding: 60px;
+
+    background-color: #f5eee8;
+
+    display: flex;
+    align-items: center;
+}
+
+.inicio-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.inicio-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.inicio-etiqueta {
+    font-size: 14px !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #8b5e3c;
+    margin-bottom: 15px !important;
+}
+
+.inicio h1 {
+    font-size: 52px;
+    margin-bottom: 25px;
+}
+
+.inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.inicio-imagen {
+    flex: 0 0 380px;
+    max-width: 380px;
+}
+
+.inicio-imagen img {
+    width: 380px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+}
+
+.boton {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.boton:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.productos-destacados {
+    padding: 60px;
+    text-align: center;
+}
+
+.productos-destacados h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.productos-destacados h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+
+.producto {
+    width: 250px;
+    min-height: 430px;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-producto {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.producto h3 {
+    margin-bottom: 10px;
+}
+
+.producto p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.boton-producto {
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding: 10px 18px;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.boton-producto {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.boton-producto:hover {
+    opacity: 0.85;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.nosotros {
+    padding: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.nosotros h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bloque {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.bloque h2 {
+    margin-bottom: 15px;
+    color: #8b5e3c;
+}
+
+.bloque p {
+    line-height: 1.7;
+}
+.contacto {
+    padding: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contacto h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.contacto-contenido {
+    display: flex;
+    gap: 30px;
+}
+
+.formulario,
+.informacion-contacto {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.formulario h2,
+.informacion-contacto h2 {
+    margin-bottom: 25px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.formulario textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.formulario button {
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8b5e3c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    opacity: 0.85;
+}
+
+.informacion-contacto p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.proceso {
+    margin-top: 50px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.proceso h2 {
+    color: #8b5e3c;
+    margin-bottom: 15px;
+}
+
+.proceso p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.proceso-imagen img {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.porque-elegirnos {
+    padding: 60px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.porque-elegirnos h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.razones {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.razon {
+    flex: 1;
+    padding: 30px;
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.razon i {
+    font-size: 35px;
+    color: #8b5e3c;
+    margin-bottom: 20px;
+}
+
+.razon h3 {
+    margin-bottom: 15px;
+}
+
+.razon p {
+    line-height: 1.6;
+}
+
+.productos-pagina {
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.productos-pagina h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.descripcion-productos {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.producto-catalogo {
+    display: flex;
+    gap: 25px;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    background-color: #f9f9f9;
+
+    text-align: left;
+}
+
+.imagen-catalogo {
+    width: 200px;
+    min-width: 200px;
+    height: 250px;
+
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagen-catalogo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-producto h2 {
+    margin-bottom: 15px;
+}
+
+.info-producto p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b5e3c;
+}
+
+.info-producto .boton-producto {
+    margin-top: auto;
+    width: fit-content;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 28px !important;
+    height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+    .porque-elegirnos {
+        padding: 40px 20px;
+    }
+
+    .razones {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .razon {
+        width: 100%;
+    }
+
+        .inicio {
+        padding: 40px 20px;
+    }
+
+    .inicio-contenido {
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .inicio p {
+        font-size: 17px;
+    }
+
+    .inicio-imagen {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .inicio-imagen img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        min-height: 400px;
+        padding: 30px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 35px;
+    }
+
+    .inicio p {
+        font-size: 17px;
+    }
+
+    .productos-destacados {
+        padding: 40px 20px;
+    }
+
+    .productos {
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        width: 45%;
+    }
+
+    .nosotros {
+        padding: 40px 20px;
+    }
+
+    .contacto {
+        padding: 40px 20px;
+    }
+
+    .contacto-contenido {
+        flex-direction: column;
+    }
+
+    .proceso-imagen img {
+        height: 300px;
+    }
+
+        .productos-pagina {
+        padding: 40px 20px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-catalogo {
+        flex-direction: column;
+    }
+
+    .imagen-catalogo {
+        width: 100%;
+        height: 300px;
+    }
+
+    .info-producto .boton-producto {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+.redes-sociales {
+    margin-top: 60px;
+}
+
+.redes-sociales h3 {
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 140px;
+    height: 42px;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.redes-sociales a:hover {
+    opacity: 0.85;
+}
+
+.redes-sociales i {
+    font-size: 19px;
+}
